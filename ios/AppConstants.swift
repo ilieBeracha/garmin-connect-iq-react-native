@@ -8,7 +8,8 @@ struct AppConstants {
     static let MESSAGE_TYPE_CURRENT_ANGLE = "MESSAGE_TYPE_CURRENT_ANGLE"
     static let MESSAGE_TYPE_MAX_ANGLE = "MESSAGE_TYPE_MAX_ANGLE"
 
-    static let APP_ID = ""
+    // Set at runtime via GarminConnectModule.initGarminSDK()
+    static var APP_ID: String = ""
 
     static let STATUS_ONLINE = "ONLINE"
     static let STATUS_OFFLINE = "OFFLINE"
