@@ -15,9 +15,12 @@ public class GarminConnectModule: NSObject, IQDeviceEventDelegate, IQAppMessageD
         self.emitter = eventEmitter
     }
 
-    @objc public func initGarminSDK(urlScheme: NSString){
+    // Change line 18-21 to accept both urlScheme AND appId:
+    @objc public func initGarminSDK(urlScheme: NSString, appId: NSString){
         ConnectIQ.sharedInstance().initialize(withUrlScheme: urlScheme as String, uiOverrideDelegate: nil)
         GarminDeviceStorage.urlScheme = urlScheme as String
+        GarminDeviceStorage.appId = appId as String
+        AppConstants.APP_ID = appId as String
         self.onSdkReady()
     }
 

@@ -3,9 +3,10 @@ import ConnectIQ
 
 @objc(GarminDeviceStorage)
 public class GarminDeviceStorage: NSObject {
-    static var urlScheme = "retic"
-    static var appId = "bd8df375-4ed5-4ff3-bcf4-b752426e1628"
-    static var devicesListKey = "devicesListKey"
+    static var urlScheme = ""
+    static var appId = ""
+    static var devicesListKey = "garmin_devices_cache"
+
 
     // IMPORTANT: IQDevice objects are SESSION-BASED and cannot be persisted!
     // Only devices from the CURRENT session's parseDeviceSelectionResponse are valid.
